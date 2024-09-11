@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "flag": "^5.0.0",
+    "flat": "^5.0.0",
+    "squirrelly": "^8.0.8"
+  }
+}

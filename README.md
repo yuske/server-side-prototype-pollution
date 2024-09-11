@@ -171,6 +171,7 @@ We also recommend checking out these papers and blog posts:
 | [tar.Tar.append](/deno/std/tar/Tar.gid.PoC.ts)                                       | `gid`                                | Privilege Escalation        |                                       | [GHunter](https://github.com/KTH-LangSec/ghunter) |
 | [yaml.stringify](/deno/std/yaml/stringify.indent.PoC.ts)                             | `indent`                             | Out of Memory               |                                       | [GHunter](https://github.com/KTH-LangSec/ghunter) |
 
+
 `*`: This was not the case prior to Deno v1.41.1, see `CVE-2024-27931`.
 
 ## NPM Packages
@@ -234,6 +235,30 @@ We also recommend checking out these papers and blog posts:
 | window-size         | 1.1.1   | [tput](/npm-packages/window-size/window-size.PoC.js)                                | `shell`; `NODE_OPTIONS`      | ACI  | [Dasty](https://github.com/KTH-LangSec/Dasty)                 |
 | winreg              | 1.2.4   | [values](/npm-packages/winreg/winreg.PoC.js)                                        | `shell`; `NODE_OPTIONS`      | ACI  | [Dasty](https://github.com/KTH-LangSec/Dasty)                 |
 | workerpool          | 6.4.0   | [exec](/npm-packages/workerpool/workerpool.PoC.js)                                  | `env.NODE_OPTIONS`           | ACI  | [Dasty](https://github.com/KTH-LangSec/Dasty)                 |
+| node-blade          | 3.3.1   | [compile](/npm-packages/node-blade/app-1.js)                                 | `code`, `value`                       | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| node-blade          | 3.3.1   | [compile](/npm-packages/node-blade/app-5.js)                                 | `line`, `value`                       | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| node-blade          | 3.3.1   | [compile](/npm-packages/node-blade/app-2.js)                                 | `include`, `exposing`, `value`        | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| node-blade          | 3.3.1   | [compile](/npm-packages/node-blade/app-3.js)                                 | `output`, `value`           | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| node-blade          | 3.3.1   | [compile](/npm-packages/node-blade/app-4.js)                                 | `itemAlias`, `value`      | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| node-blade          | 3.3.1   | [compile](/npm-packages/node-blade/app-6.js)                                 | `templateNamespace`, `value`          | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| ejs                 | 2.7.4   | [renderFile](/npm-packages/ejs@2.7.4/app-1.js)                                  | `escape`, `client`                    | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| ejs                 | 2.7.4   | [renderFile](/npm-packages/ejs@2.7.4/app-2.js)                                  | `destructuredLocals`                  | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| squirrellyJS        | 8.0.8   | [renderFile](/npm-packages/squirrelly/app-0.js)                         | `settings`                            | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| squirrellyJS        | 8.0.8   | [renderFile](/npm-packages/squirrelly/app-1.js)                         | `settings`, `n`                       | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| dustjs              | 3.0.1   | [render](/npm-packages/dustjs/app-0.js)                                         | `title`                         | XSS   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| ect                 | 0.5.9   | [ECT](/npm-packages/ect/app-0.js)                                                | `indent`                              | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| ect (coffee-script) | 1.12.7  | [ECT](/npm-packages/ect/app-1.js)                                  | `filename`, `inlineMap`               | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| doT                 | 1.1.3   | [process](/npm-packages/doT/app-0.js)                                        | `global`                              | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| doT                 | 1.1.3   | [process](/npm-packages/doT/app-1.js)                                        | `destination`                         | FileIO | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| pug                 | 3.0.2   | [compile](/npm-packages/pug/app-0.js)                                        | `code`                                | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| pug                 | 3.0.2   | [compile](/npm-packages/pug/app-1.js)                                        | `attrs`, `val`                        | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| jade                | 1.11.0  | [renderFile](/npm-packages/jade/app-0.js)                                 | `code`, `self`                        | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| jade                | 1.11.0  | [renderFile](/npm-packages/jade/app-1.js)                                 | `block`, `self`                       | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| hamlet              | 0.3.3   | [hamlet](/npm-packages/hamlet/app-0.js)                                       | `filename`                            | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| hamlet              | 0.3.3   | [hamlet](/npm-packages/hamlet/app-1.js)                                       | `variable`                            | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| mote                | 0.2.0   | [compile](/npm-packages/mote/app-0.js)                                         | `ANYKEY*`                             | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| ractive.js          | 1.4.2   | [toHTML](/npm-packages/ractive.js/app-0.js)                                     | `statics`                             | ACE   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
+| saker               | 1.1.1   | [compile](/npm-packages/saker/app-0.js)                                        | `$saker_raw$`, `str`                  | XSS   | [UoPF](https://github.com/jackfromeast/UoPGadget)            |
 
 `*`: denotes the gadgets that require the attacker’s control of a local file for
 arbitrary code execution.

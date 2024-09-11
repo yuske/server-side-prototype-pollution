@@ -1,0 +1,16 @@
+{
+    "name": "final-countdown-stackctf-2020",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./watcher.js",
+        "dev": "nodemon ./bin/www"
+    },
+    "dependencies": {
+        "blade": "^3.3.1",
+        "ion-parser": "^0.5.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
+}

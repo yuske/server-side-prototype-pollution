@@ -1,0 +1,9 @@
+The Daugherty's have 8 kids. Their names are:
+
+{{@each (it.kids) => val, index}}
+{{@if(index < it.kids.length - 1 _}}
+  {{val}},
+{{#else _}}
+  and {{val}}
+{{/if}}
+{{/each}}

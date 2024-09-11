@@ -1,0 +1,15 @@
+{
+  "name": "htmlstore",
+  "version": "1.0.0",
+  "description": "htmlStore will help you store html file.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.4",
+    "express": "^4.17.1"
+  }
+}
